@@ -29,9 +29,9 @@ setmaintask(copytask)
 let renderTask=<h2>No Task Available</h2>;
 {console.log('render_s',maintask.length)}
 
-
+ if(maintask.length!=0){
 renderTask=maintask.map((t,i)=>{
-  if(maintask.length!=0){
+ 
 
   
 return <>
@@ -44,8 +44,9 @@ return <>
 <button onClick={()=>{deletehandler(i)}} className='bg-red-400 text-white px-4 py-2 rounded font-bold'>Delete</button>
 </li>
 </> 
-  }
+  
 })
+}//if end 
   return (
     <>
     <h1 className='bg-black text-white p-6 text-5xl font-bold text-center '>Sarthak Tudo List</h1>
